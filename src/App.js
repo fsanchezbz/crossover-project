@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Getdata from "./components/Getdata";
 
@@ -6,12 +6,7 @@ import Getdata from "./components/Getdata";
 export default function App() {
   const [count, setCount] = useState(1);
 
-  const prevNavigation = () => {
-    if (count >= 1) {
-      setCount(count - 1);
-    }
-  };
-
+ 
   const random = () => {
     let randomNumber = Math.floor(Math.random() * 99);
     setCount(randomNumber);
