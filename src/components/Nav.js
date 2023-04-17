@@ -17,6 +17,7 @@ export default function Nav() {
             width="100"
             height="100"
           />
+          <h3>Travel World</h3>
           <button
             type="button"
             data-bs-toggle="collapse"
