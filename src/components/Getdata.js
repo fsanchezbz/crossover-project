@@ -2,15 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Loading from "./Loading.js";
 
-export default function Getdata() {
+export default function Getdata({count}) {
   const [data, setData] = useState();
-  const [count, setCount] = useState(0);
-
-  const random = () => {
-    let randomNumber = Math.floor(Math.random() * 5);
-    setCount(randomNumber);
-  };
-
+  
   useEffect(() => {
     load();
   }, []);
@@ -65,19 +59,7 @@ export default function Getdata() {
               </div>
             </div>
             <h3>Budget: {data[count]?.budget}€</h3>
-            <button
-              type="button"
-              class="btn btn-outline-warning"
-              style={{
-                padding: "10px",
-                width: "200px",
-                marginTop: "2rem",
-                marginBottom: "1rem",
-              }}
-              onClick={random}
-            >
-              New Inspiration
-            </button>
+            
           </div>
         </div>
       )}
